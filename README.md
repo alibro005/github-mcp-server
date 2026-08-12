@@ -6,6 +6,10 @@ A Python-based **Model Context Protocol (MCP) server** that lets AI agents inter
 
 This project demonstrates how MCP can connect an AI agent to GitHub without putting GitHub API logic directly inside the agent.
 
+## Demo
+
+![GitHub MCP Server Demo](assets/demo.gif)
+
 ### Architecture
 
 ```mermaid
@@ -21,22 +25,20 @@ flowchart LR
 
 ## Features
 
-* GitHub API integration through MCP
-* Repository, pull request, and commit tools
-* GitHub Copilot Agent integration
-* MCP Inspector support
-* Environment-based authentication
+- GitHub API integration through MCP
+- Repository, pull request, and commit tools
+- GitHub Copilot Agent integration
+- MCP Inspector support
+- Environment-based authentication
 
 ## Available Tools
 
 | Tool                 | Description                   |
 | -------------------- | ----------------------------- |
 | `list_repositories`  | List available repositories   |
-| `get_repository`     | Get repository details        |
 | `list_pull_requests` | List repository pull requests |
-| `get_pull_request`   | Get pull request details      |
 | `list_commits`       | List repository commits       |
-| `get_commit`         | Get commit details            |
+| `get_issues`         | Get open repository issues    |
 
 ## Example Requests
 
@@ -58,12 +60,12 @@ Copilot selects the appropriate MCP tool, retrieves the data through the server,
 
 ## Tech Stack
 
-* Python
-* Model Context Protocol (MCP)
-* GitHub REST API
-* GitHub Copilot
-* MCP Inspector
-* VS Code
+- Python
+- Model Context Protocol (MCP)
+- GitHub REST API
+- GitHub Copilot
+- MCP Inspector
+- VS Code
 
 ## Project Structure
 
@@ -72,11 +74,22 @@ github-mcp-server/
 │
 ├── .vscode/
 │   └── mcp.json
+│
+├── assets/
+│   └── demo.gif
+│
+├── tools/
+│   ├── repos.py
+│   ├── pulls.py
+│   ├── commits.py
+│   └── issues.py
+│
 ├── server.py
 ├── requirements.txt
 ├── .env
 ├── .gitignore
 └── README.md
+
 ```
 
 ## Setup
@@ -150,13 +163,13 @@ User → Copilot Agent → MCP Server → GitHub API → Response
 
 ## Future Improvements
 
-* GitHub issue management
-* Pull request creation and updates
-* Automated PR reviews
-* Commit and diff analysis
-* Repository search
-* AI-generated PR summaries
-* GitHub Actions integration
+- GitHub issue management
+- Pull request creation and updates
+- Automated PR reviews
+- Commit and diff analysis
+- Repository search
+- AI-generated PR summaries
+- GitHub Actions integration
 
 ## Project Outcome
 
