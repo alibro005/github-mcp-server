@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "github-mcp": {
+      "type": "stdio",
+      "command": ".venv\\Scripts\\python.exe",
+      "args": ["server.py"]
+    }
+  }
+}
